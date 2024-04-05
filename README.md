@@ -15,4 +15,5 @@ rm save_pid.txt
 ```
 - Call server:
 - http://keepitnative.xyz:4000/
+- Postman, POST on: http://keepitnative.xyz:4000/image
 
