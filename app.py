@@ -9,7 +9,11 @@ app = Flask(__name__)
 cors = CORS(app)
 
 if __name__ == '__main__':
-    app.run(host="127.0.0.1", port=5000)
+    app.run(host="127.0.0.1", port=4000)
+
+@app.route('/')
+def hello_world():
+    return 'Hello, World!'
 
 @app.route("/image", methods=['GET', 'POST'])
 def image():
