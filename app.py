@@ -1,6 +1,8 @@
 from flask import Flask
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'mysecretkey'
+
+@app.route('/', methods=['GET', 'POST'])
 def hello_world():
     return 'Hello, World!'
 
