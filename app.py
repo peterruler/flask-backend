@@ -7,8 +7,10 @@ import sys
 
 app = Flask(__name__)
 cors = CORS(app)
-if __name__ == '__main__':
-      app.run(host='0.0.0.0', port=4000)
+
+@app.route('/', methods=['GET', 'POST'])
+def hello_world():
+    return 'Hello, World!'
 
 @app.route("/image", methods=['GET', 'POST'])
 def image():
@@ -27,3 +29,5 @@ def video():
             out.write(bytesOfVideo)
         return "Video read"
 '''
+if __name__ == '__main__':
+    app.run(debug=True,host='0.0.0.0', port=4000)
