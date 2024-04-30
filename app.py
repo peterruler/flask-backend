@@ -52,6 +52,7 @@ def image():
         else :
             return_text = f"Dieses Bild ist {100 * (1 - score):.2f}% Katze und {100 * score:.2f}% Hund."
 
+        print(return_text)
         return return_text
 
 '''
