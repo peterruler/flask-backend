@@ -6,11 +6,15 @@
 # Tutorial
 - https://narainsreehith.medium.com/upload-image-video-to-flask-backend-from-react-native-app-expo-app-1aac5653d344
 
-- start:
+# build
+- conda activate tensorflow
+- conda install -y flask && conda install -y flask-cors 
+
+# start
 ```
   conda activate tensorflow && python app.py
 ```
-- run forever:
+# start in background
 ```
 conda activate tensorflow &&
 nohup python app.py > my.log 2>&1 &
