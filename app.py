@@ -67,6 +67,8 @@ def image():
         predictions = loaded_model.predict(img_array, verbose=0)
         score = float(predictions[0])
         return_text = ""
+        if os.path.isfile(filename):
+            os.remove(filename)
         if 0.2 < score < 0.8:
             return_text = "Bei diesem Bild konnte Tiertyp nicht ermittelt werden! Sind Sie sicher, dass es sich um das Bild eines Hundes oder einer Katze handelt?"
         else :
