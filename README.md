@@ -3,6 +3,9 @@
 - install tensorflow on your desired system, install miniconda, please see:
 - https://github.com/jeffheaton/t81_558_deep_learning/blob/master/install/tensorflow-install-jul-2020.ipynb
 
+# Tutorial
+- https://narainsreehith.medium.com/upload-image-video-to-flask-backend-from-react-native-app-expo-app-1aac5653d344
+
 - start:
 ```
   conda activate tensorflow && python app.py
