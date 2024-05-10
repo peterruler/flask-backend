@@ -10,23 +10,26 @@
 - conda activate tensorflow
 - conda install -y flask && conda install -y flask-cors 
 
-# start
+# start for development
 ```
   conda activate tensorflow && python app.py
 ```
-# start in background
+# stop development server
+`CTRL + C`
+
+# start in background 'for production'
 ```
 conda activate tensorflow &&
 nohup python app.py > my.log 2>&1 &
 echo $! > save_pid.txt
 ```
-# stop server
+# stop server 'for production'
 ```
 ps -ef | grep python # get pid of app.py process
 kill -9 `cat save_pid.txt`
 rm save_pid.txt
 ```
-- Call server:
-- http://keepitnative.xyz:4000/
+# run webserver
+- Call server: http://keepitnative.xyz:4000/
 - Postman, POST on: http://keepitnative.xyz:4000/image
-
+using payload.txt as body content
