@@ -75,15 +75,6 @@ def image():
             return_text = f"Dieses Bild ist {100 * (1 - score):.2f}% Katze und {100 * score:.2f}% Hund."
 
         return return_text
-
-'''
-@app.route("/video", methods=['GET', 'POST'])
-def video():
-    if(request.method == "POST"):
-        bytesOfVideo = request.get_data()
-        with open('video.mp4', 'wb') as out:
-            out.write(bytesOfVideo)
-        return "Video read"
-'''
+        
 if __name__ == '__main__':
     app.run(debug=True,host='0.0.0.0', port=4000)
