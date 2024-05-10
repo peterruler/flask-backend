@@ -31,5 +31,5 @@ rm save_pid.txt
 ```
 # run webserver
 - Call server: http://keepitnative.xyz:4000/
-- Postman, POST on: http://keepitnative.xyz:4000/image
-using payload.txt as body content
+- Postman, choose type: POST on address: http://keepitnative.xyz:4000/image
+using contents of file: payload.base64img.txt as body content
