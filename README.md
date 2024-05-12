@@ -6,7 +6,7 @@
 # Tutorial
 - https://narainsreehith.medium.com/upload-image-video-to-flask-backend-from-react-native-app-expo-app-1aac5653d344
 
-# build
+# Install needed pip packages
 - conda activate tensorflow
 - conda install -y flask && conda install -y flask-cors 
 
@@ -29,7 +29,7 @@ ps -ef | grep python # get pid of app.py process
 kill -9 `cat save_pid.txt`
 rm save_pid.txt
 ```
-# run webserver
-- Call server: http://keepitnative.xyz:4000/
-- Postman, choose type: POST on address: http://keepitnative.xyz:4000/image
+# Demo
+- call http://keepitnative.xyz:4000/ hello wold endpoint
+- Download and use Postman, choose type: POST on address: http://keepitnative.xyz:4000/image
 using contents of file: payload.base64img.txt as body content
