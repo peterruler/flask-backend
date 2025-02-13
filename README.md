@@ -1,36 +1,47 @@
-# Flask Backend
+# Flask Backend (Python Rest Server)
 
-# Prerequisites
-- install tensorflow on your specific system (pc, linux or macos arch x64 or arch arm is different), install miniconda, please check jeff heaton YouTube and GitHub pages.
-- https://github.com/jeffheaton/t81_558_deep_learning/blob/master/install/tensorflow-install-jul-2020.ipynb
+## Prerequisites
+1. Install TensorFlow on your specific system (PC, Linux, or macOS, arch x64 or arch ARM is different). Install Miniconda. Please check Jeff Heaton's YouTube and GitHub pages for detailed instructions:
+   - Download and install Miniconda from the website: [Download Miniconda](https://docs.anaconda.com/miniconda/)
+   - [TensorFlow Installation Guide](https://github.com/jeffheaton/t81_558_deep_learning/blob/master/install/tensorflow-install-jul-2020.ipynb)
 
-# Blueprint as a start on Webpage 
-- https://narainsreehith.medium.com/upload-image-video-to-flask-backend-from-react-native-app-expo-app-1aac5653d344
+2. Use the following blueprint as a start for your webpage:
+   - [Upload Image/Video to Flask Backend from React Native App](https://narainsreehith.medium.com/upload-image-video-to-flask-backend-from-react-native-app-expo-app-1aac5653d344)
 
-# Install needed pip packages
-- conda activate tensorflow
-- conda install -y flask && conda install -y flask-cors 
+## Installation
+1. Activate the TensorFlow environment:
+   ```sh
+   conda activate tensorflow
+   ```
 
-# start for development
+2. Install needed pip packages:
+   ```sh
+   conda install -y flask && conda install -y flask-cors
+   ```
+
+## Start for development
+```sh
+conda activate tensorflow && python app.py
 ```
-  conda activate tensorflow && python app.py
-```
-# stop development server
+
+## Stop development server
 `CTRL + C`
 
-# start in background 'for production'
-```
+## Start in background 'for production'
+```sh
 conda activate tensorflow &&
 nohup python app.py > my.log 2>&1 &
 echo $! > save_pid.txt
 ```
-# stop server 'for production'
-```
+
+## Stop server 'for production'
+```sh
 ps -ef | grep python # get pid of app.py process
 kill -9 `cat save_pid.txt`
 rm save_pid.txt
 ```
-# Demo
-- call http://keepitnative.xyz:4000/ hello world endpoint
+
+## Demo
+- Call http://keepitnative.xyz:4000/ hello world endpoint
 - Download and use Postman, choose type: POST on address: http://keepitnative.xyz:4000/image
 using contents of file: payload.base64img.txt as body content
