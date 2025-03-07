@@ -42,6 +42,7 @@ rm save_pid.txt
 ```
 
 ## Demo
-- Call http://keepitnative.xyz:4000/ hello world endpoint
-- Download and use Postman, choose type: POST on address: http://keepitnative.xyz:4000/image
+- The Flask-Backend is no longer online on: [http://keepitnative.xyz:4000](http://keepitnative.xyz:4000)
+- Please run the server locally instead
+- Download and use Postman, choose type: POST on address: http://localhost:4000/image
 using contents of file: payload.base64img.txt as body content
